@@ -1,0 +1,177 @@
+@import url(http://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css);
+@import url(http://fonts.googleapis.com/css?family=Ubuntu+Mono);
+input,
+button {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font: 14px/20px "Lucida Grande", Tahoma, Verdana, sans-serif;
+    color: #d8e5e5;
+    background: #d8e5e5;
+}
+
+.calc {
+    margin: 20px auto;
+    padding: 15px;
+    width: 177px;
+    background: white;
+    border: 1px solid #cabfbf;
+    border-radius: 4px;
+    background-image: -webkit-linear-gradient(top, #121111, #cabfbf);
+    background-image: -moz-linear-gradient(top, #121111, #cabfbf);
+    background-image: -o-linear-gradient(top, #121111, #cabfbf);
+    background-image: linear-gradient(to bottom, #121111, #cabfbf);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 4px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.1), 0 0 4px rgba(0, 0, 0, 0.5);
+}
+
+.calc-display {
+    margin: 0 0 20px;
+    padding: 3px;
+    background: rgb(117, 134, 167);
+    border-radius: 3px;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.calc-display-input {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 0 8px;
+    font: 26px/35px 'Ubuntu Mono', monospace;
+    color: black;
+    text-align: right;
+    background: #a2ad87;
+    background-clip: padding-box;
+    border: 1px solid;
+    border-radius: 3px;
+    background-image: -webkit-linear-gradient(top, #a2ad87, #a2ad87);
+    background-image: -moz-linear-gradient(top, #a2ad87, #a2ad87);
+    background-image: -o-linear-gradient(top, #a2ad87, #a2ad87);
+    background-image: linear-gradient(to bottom, #a2ad87, #a2ad87);
+    -webkit-box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12);
+    box-shadow: inset 0 2px 3px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.12);
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+}
+
+.calc-row {
+    margin-top: 7px;
+    zoom: 1;
+}
+
+.calc-row:before,
+.calc-row:after {
+    content: '';
+    display: table;
+}
+
+.calc-row:after {
+    clear: both;
+}
+
+.calc-button {
+    float: left;
+    padding: 0;
+    margin: 0 0 0 7px;
+    width: 39px;
+    font: 16px/23px 'Ubuntu Mono', monospace;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    text-shadow: 0 1px rgba(0, 0, 0, 0.4);
+    background: #313131;
+    background-clip: padding-box !important;
+    border: 0;
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    border-radius: 3px;
+    cursor: pointer;
+    background-image: -webkit-linear-gradient(top, #313131, #5249d1);
+    background-image: -moz-linear-gradient(top, #313131, #5249d1);
+    background-image: -o-linear-gradient(top, #313131, #5249d1);
+    background-image: linear-gradient(to bottom, #313131, #5249d1);
+    -webkit-box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08), 0 1px rgba(0, 0, 0, 0.3), 0 0 0 1px rgba(255, 255, 255, 0.08);
+}
+
+.calc-button:first-child {
+    margin-left: 0;
+}
+
+.calc-button:active {
+    background: #280072;
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.6), 0 1px rgba(0, 0, 0, 0.1), 0 0 0 1px rgba(255, 255, 255, 0.05);
+}
+
+.calc-button-pink {
+    color: black;
+    background: #ffb9b9;
+    background-image: -webkit-linear-gradient(top, #f87373, #ffb9b9);
+    background-image: -moz-linear-gradient(top, #f87373, #ffb9b9);
+    background-image: -o-linear-gradient(top, #f87373, #ffb9b9);
+    background-image: linear-gradient(to bottom, #f87373, #ffb9b9);
+}
+
+.calc-button-pink:active {
+    background: #e33dac;
+}
+
+.calc-button-green {
+    background: #146305;
+    background-image: -webkit-linear-gradient(top, #093301, #146305);
+    background-image: -moz-linear-gradient(top, #093301, #146305);
+    background-image: -o-linear-gradient(top, #093301, #146305);
+    background-image: linear-gradient(to bottom, #093301, #146305);
+}
+
+.calc-button-green:active {
+    background: #091d10;
+}
+
+.calc-button-red {
+    background: #f02c49;
+    background-image: -webkit-linear-gradient(top, #e01e1e, #f02c49);
+    background-image: -moz-linear-gradient(top, #e01e1e, #f02c49);
+    background-image: -o-linear-gradient(top, #e01e1e, #f02c49);
+    background-image: linear-gradient(to bottom, #e01e1e, #f02c49);
+}
+
+.calc-button-red:active {
+    background: #4d0202;
+}
+
+.calc-button-big {
+    font-size: 16px;
+}
+
+.lt-ie8 .calc-display-input {
+    width: 152px;
+}
+
+.lt-ie7 .calc-row {
+    margin-left: -7px;
+}
+
+div {
+    font-size: 30px;
+    background-color: rgb(134, 67, 67);
+    border: 1px solid rgb(29, 17, 17);
+    text-align: center;
+    display: inline-block;
+    width: 300px;
+    height: 50px;
+    margin: 20px 20px 20px 470px;
+    padding: 30px 20px 5px 20px;
+}
